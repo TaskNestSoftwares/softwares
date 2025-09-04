@@ -74,35 +74,36 @@
   <div class="container">
     <img id="appLogo" class="logo" src="https://via.placeholder.com/100?text=App" alt="App Logo">
     <h1 id="title">Loading...</h1>
-    <p id="desc">Preparing your download.</p>
-    <a id="downloadBtn" class="btn" href="#">Download</a>
+    <p id="desc">Click the button below to go to the official download page.</p>
+    <a id="downloadBtn" class="btn" href="#">Go to Official Website</a>
     <br>
-    <a href="../index.html" class="back">← Back to Home</a>
+    <a href="index.html" class="back">← Back to Home</a>
   </div>
   <footer>
     <p>© 2025 TaskNestSoftwares. All rights reserved.</p>
   </footer>
 
   <script>
+    // Get app name from URL
     const params = new URLSearchParams(window.location.search);
     const app = params.get("app") || "Unknown";
 
     document.getElementById("title").textContent = "Download " + app;
-    document.getElementById("desc").textContent = "Click the button below to download " + app + ".";
 
-    // Permanent 3rd-party download links
+    // Official websites
     const downloadLinks = {
-      "Chrome": "https://dl.google.com/chrome/install/standalonesetup64.exe",
-      "Office": "https://officecdn.microsoft.com/pr/Office2019ProPlusRetail.img",
-      "Edge": "https://msedgedownloads.azureedge.net/stable/113.0.1774.35/MicrosoftEdgeSetup.exe",
-      "Photoshop": "https://download.filehippo.com/adobe_photoshop_cc_setup.exe",
-      "Dreamweaver": "https://download.filehippo.com/adobe_dreamweaver_cc_setup.exe",
-      "Lightroom": "https://download.filehippo.com/adobe_lightroom_cc_setup.exe",
-      "Firefox": "https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US",
-      "Teams": "https://download.microsoft.com/download/1/9/8/19837E57-327D-4B5B-9D8F-2E3D2186EDEB/Teams_windows_x64.exe",
-      "Minecraft": "https://launcher.mojang.com/download/MinecraftInstaller.msi"
+      "Chrome": "https://www.google.com/chrome/",
+      "Office": "https://www.microsoft.com/microsoft-365",
+      "Edge": "https://www.microsoft.com/edge",
+      "Photoshop": "https://www.adobe.com/products/photoshop.html",
+      "Dreamweaver": "https://www.adobe.com/products/dreamweaver.html",
+      "Lightroom": "https://www.adobe.com/products/photoshop-lightroom.html",
+      "Firefox": "https://www.mozilla.org/firefox/",
+      "Teams": "https://www.microsoft.com/microsoft-teams",
+      "Minecraft": "https://www.minecraft.net/en-us/download"
     };
 
+    // Logos
     const logos = {
       "Chrome": "https://img.icons8.com/color/96/000000/chrome--v1.png",
       "Office": "https://img.icons8.com/color/96/000000/microsoft-office-2019.png",
@@ -115,6 +116,7 @@
       "Minecraft": "https://img.icons8.com/color/96/000000/minecraft-logo.png"
     };
 
+    // Set button link
     const btn = document.getElementById("downloadBtn");
     if (downloadLinks[app]) {
       btn.href = downloadLinks[app];
@@ -124,6 +126,7 @@
       btn.style.background = "#aaa";
     }
 
+    // Set logo
     const logoImg = document.getElementById("appLogo");
     if (logos[app]) {
       logoImg.src = logos[app];
@@ -134,3 +137,4 @@
   </script>
 </body>
 </html>
+
