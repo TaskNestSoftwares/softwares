@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Download</title>
+  <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/000000/download.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7ff;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .container {
+      background: white;
+      border-radius: 14px;
+      padding: 40px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 90%;
+    }
+    .logo {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+      border-radius: 20%;
+      background: #f0f0f0;
+      object-fit: contain;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #0d47a1;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+    .btn {
+      display: inline-block;
+      background: #1565c0;
+      color: white;
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #0d47a1;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: #1565c0;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.85rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img id="appLogo" class="logo" src="https://via.placeholder.com/100?text=App" alt="App Logo">
+    <h1 id="title">Loading...</h1>
+    <p id="desc">Preparing your download.</p>
+    <a id="downloadBtn" class="btn" href="#">Download</a>
+    <br>
+    <a href="../index.html" class="back">← Back to Home</a>
+  </div>
+  <footer>
+    <p>© 2025 TaskNestSoftwares. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const app = params.get("app") || "Unknown";
+
+    document.getElementById("title").textContent = "Download " + app;
+    document.getElementById("desc").textContent = "Click the button below to download " + app + ".";
+
+    // Permanent 3rd-party download links
+    const downloadLinks = {
+      "Chrome": "https://dl.google.com/chrome/install/standalonesetup64.exe",
+      "Office": "https://officecdn.microsoft.com/pr/Office2019ProPlusRetail.img",
+      "Edge": "https://msedgedownloads.azureedge.net/stable/113.0.1774.35/MicrosoftEdgeSetup.exe",
+      "Photoshop": "https://download.filehippo.com/adobe_photoshop_cc_setup.exe",
+      "Dreamweaver": "https://download.filehippo.com/adobe_dreamweaver_cc_setup.exe",
+      "Lightroom": "https://download.filehippo.com/adobe_lightroom_cc_setup.exe",
+      "Firefox": "https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US",
+      "Teams": "https://download.microsoft.com/download/1/9/8/19837E57-327D-4B5B-9D8F-2E3D2186EDEB/Teams_windows_x64.exe",
+      "Minecraft": "https://launcher.mojang.com/download/MinecraftInstaller.msi"
+    };
+
+    const logos = {
+      "Chrome": "https://img.icons8.com/color/96/000000/chrome--v1.png",
+      "Office": "https://img.icons8.com/color/96/000000/microsoft-office-2019.png",
+      "Edge": "https://img.icons8.com/color/96/000000/ms-edge-new.png",
+      "Photoshop": "https://img.icons8.com/color/96/000000/adobe-photoshop.png",
+      "Dreamweaver": "https://img.icons8.com/color/96/000000/adobe-dreamweaver.png",
+      "Lightroom": "https://img.icons8.com/color/96/000000/adobe-lightroom.png",
+      "Firefox": "https://img.icons8.com/color/96/000000/firefox.png",
+      "Teams": "https://img.icons8.com/color/96/000000/microsoft-teams.png",
+      "Minecraft": "https://img.icons8.com/color/96/000000/minecraft-logo.png"
+    };
+
+    const btn = document.getElementById("downloadBtn");
+    if (downloadLinks[app]) {
+      btn.href = downloadLinks[app];
+    } else {
+      btn.href = "#";
+      btn.textContent = "Not Available";
+      btn.style.background = "#aaa";
+    }
+
+    const logoImg = document.getElementById("appLogo");
+    if (logos[app]) {
+      logoImg.src = logos[app];
+      logoImg.alt = app + " Logo";
+    } else {
+      logoImg.src = "https://via.placeholder.com/100?text=App";
+    }
+  </script>
+</body>
+</html>
