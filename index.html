@@ -2,164 +2,141 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>TaskNestSoftwares</title>
-  <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/000000/windows-10.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskNest Mobile Softwares</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #fff;
-      color: #222;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
     }
     header, footer {
-      background: #1565c0;
+      background-color: #007BFF;
       color: white;
       padding: 15px;
       text-align: center;
+      font-size: 22px;
+      font-weight: bold;
     }
-    h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-    .search-box {
-      margin: 10px auto;
+    .search-bar {
       text-align: center;
+      margin: 15px;
     }
-    .search-box input {
-      padding: 10px;
+    .search-bar input {
       width: 60%;
-      border-radius: 20px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #007BFF;
+      border-radius: 8px;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
       gap: 20px;
       padding: 20px;
     }
     .card {
-      text-decoration: none;
-      background: #f5f7ff;
-      border-radius: 12px;
-      padding: 15px;
       text-align: center;
-      transition: transform 0.2s;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 12px;
+      transition: 0.3s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-decoration: none;
+      color: inherit;
     }
     .card:hover {
+      background: #eaf3ff;
       transform: translateY(-5px);
     }
     .card img {
-      width: 64px;
-      height: 64px;
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
       margin-bottom: 10px;
-    }
-    .card h2 {
-      font-size: 1rem;
-      color: #0d47a1;
-      margin: 0;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>TaskNestSoftwares</h1>
-    <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Search software...">
-    </div>
-  </header>
+  <header>TaskNest Mobile Softwares</header>
 
-  <div class="grid" id="softwareGrid"></div>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search apps...">
+  </div>
 
-  <footer>
-    <p>© 2025 TaskNestSoftwares. All rights reserved.</p>
-  </footer>
+  <div class="grid" id="appGrid">
+    <!-- 50 Apps -->
+    <a class="card" href="download.html?app=WhatsApp"><img src="https://img.icons8.com/color/96/whatsapp.png"><h3>WhatsApp</h3></a>
+    <a class="card" href="download.html?app=Instagram"><img src="https://img.icons8.com/color/96/instagram-new.png"><h3>Instagram</h3></a>
+    <a class="card" href="download.html?app=TikTok"><img src="https://img.icons8.com/color/96/tiktok.png"><h3>TikTok</h3></a>
+    <a class="card" href="download.html?app=Facebook"><img src="https://img.icons8.com/color/96/facebook.png"><h3>Facebook</h3></a>
+    <a class="card" href="download.html?app=Snapchat"><img src="https://img.icons8.com/color/96/snapchat.png"><h3>Snapchat</h3></a>
+    <a class="card" href="download.html?app=Telegram"><img src="https://img.icons8.com/color/96/telegram-app.png"><h3>Telegram</h3></a>
+    <a class="card" href="download.html?app=Twitter"><img src="https://img.icons8.com/color/96/twitter.png"><h3>Twitter (X)</h3></a>
+    <a class="card" href="download.html?app=Threads"><img src="https://img.icons8.com/ios-filled/96/threads.png"><h3>Threads</h3></a>
+    <a class="card" href="download.html?app=YouTube"><img src="https://img.icons8.com/color/96/youtube-play.png"><h3>YouTube</h3></a>
+    <a class="card" href="download.html?app=Spotify"><img src="https://img.icons8.com/color/96/spotify.png"><h3>Spotify</h3></a>
+    <a class="card" href="download.html?app=Netflix"><img src="https://img.icons8.com/color/96/netflix.png"><h3>Netflix</h3></a>
+    <a class="card" href="download.html?app=Discord"><img src="https://img.icons8.com/color/96/discord.png"><h3>Discord</h3></a>
+    <a class="card" href="download.html?app=Reddit"><img src="https://img.icons8.com/color/96/reddit.png"><h3>Reddit</h3></a>
+    <a class="card" href="download.html?app=Pinterest"><img src="https://img.icons8.com/color/96/pinterest.png"><h3>Pinterest</h3></a>
+    <a class="card" href="download.html?app=LinkedIn"><img src="https://img.icons8.com/color/96/linkedin.png"><h3>LinkedIn</h3></a>
+    <a class="card" href="download.html?app=Messenger"><img src="https://img.icons8.com/color/96/facebook-messenger.png"><h3>Messenger</h3></a>
+    <a class="card" href="download.html?app=Skype"><img src="https://img.icons8.com/color/96/skype.png"><h3>Skype</h3></a>
+    <a class="card" href="download.html?app=WeChat"><img src="https://img.icons8.com/color/96/weixing.png"><h3>WeChat</h3></a>
+    <a class="card" href="download.html?app=Signal"><img src="https://img.icons8.com/color/96/signal-app.png"><h3>Signal</h3></a>
+    <a class="card" href="download.html?app=Clubhouse"><img src="https://img.icons8.com/ios-filled/96/clubhouse.png"><h3>Clubhouse</h3></a>
+
+    <a class="card" href="download.html?app=Gmail"><img src="https://img.icons8.com/color/96/gmail.png"><h3>Gmail</h3></a>
+    <a class="card" href="download.html?app=GoogleDrive"><img src="https://img.icons8.com/color/96/google-drive.png"><h3>Google Drive</h3></a>
+    <a class="card" href="download.html?app=Outlook"><img src="https://img.icons8.com/color/96/ms-outlook.png"><h3>Outlook</h3></a>
+    <a class="card" href="download.html?app=Zoom"><img src="https://img.icons8.com/color/96/zoom.png"><h3>Zoom</h3></a>
+    <a class="card" href="download.html?app=Teams"><img src="https://img.icons8.com/color/96/microsoft-teams.png"><h3>Teams</h3></a>
+    <a class="card" href="download.html?app=Slack"><img src="https://img.icons8.com/color/96/slack.png"><h3>Slack</h3></a>
+    <a class="card" href="download.html?app=Notion"><img src="https://img.icons8.com/ios-filled/96/notion.png"><h3>Notion</h3></a>
+    <a class="card" href="download.html?app=Dropbox"><img src="https://img.icons8.com/color/96/dropbox.png"><h3>Dropbox</h3></a>
+    <a class="card" href="download.html?app=Evernote"><img src="https://img.icons8.com/color/96/evernote.png"><h3>Evernote</h3></a>
+    <a class="card" href="download.html?app=OneNote"><img src="https://img.icons8.com/color/96/onenote.png"><h3>OneNote</h3></a>
+
+    <a class="card" href="download.html?app=Amazon"><img src="https://img.icons8.com/color/96/amazon.png"><h3>Amazon</h3></a>
+    <a class="card" href="download.html?app=eBay"><img src="https://img.icons8.com/color/96/ebay.png"><h3>eBay</h3></a>
+    <a class="card" href="download.html?app=AliExpress"><img src="https://img.icons8.com/color/96/aliexpress.png"><h3>AliExpress</h3></a>
+    <a class="card" href="download.html?app=Flipkart"><img src="https://img.icons8.com/color/96/flipkart.png"><h3>Flipkart</h3></a>
+    <a class="card" href="download.html?app=Daraz"><img src="https://img.icons8.com/color/96/shopify.png"><h3>Daraz</h3></a>
+    <a class="card" href="download.html?app=PayPal"><img src="https://img.icons8.com/color/96/paypal.png"><h3>PayPal</h3></a>
+    <a class="card" href="download.html?app=Easypaisa"><img src="https://img.icons8.com/color/96/money-bag.png"><h3>Easypaisa</h3></a>
+    <a class="card" href="download.html?app=JazzCash"><img src="https://img.icons8.com/color/96/wallet.png"><h3>JazzCash</h3></a>
+    <a class="card" href="download.html?app=Binance"><img src="https://img.icons8.com/color/96/bitcoin.png"><h3>Binance</h3></a>
+    <a class="card" href="download.html?app=Coinbase"><img src="https://img.icons8.com/color/96/ethereum.png"><h3>Coinbase</h3></a>
+
+    <a class="card" href="download.html?app=PUBGMobile"><img src="https://img.icons8.com/color/96/pubg.png"><h3>PUBG Mobile</h3></a>
+    <a class="card" href="download.html?app=FreeFire"><img src="https://img.icons8.com/color/96/fire-element.png"><h3>Free Fire</h3></a>
+    <a class="card" href="download.html?app=CODMobile"><img src="https://img.icons8.com/color/96/target.png"><h3>COD Mobile</h3></a>
+    <a class="card" href="download.html?app=ClashOfClans"><img src="https://img.icons8.com/color/96/greek-helmet.png"><h3>Clash of Clans</h3></a>
+    <a class="card" href="download.html?app=ClashRoyale"><img src="https://img.icons8.com/color/96/castle.png"><h3>Clash Royale</h3></a>
+    <a class="card" href="download.html?app=CandyCrush"><img src="https://img.icons8.com/color/96/candy.png"><h3>Candy Crush</h3></a>
+    <a class="card" href="download.html?app=Roblox"><img src="https://img.icons8.com/color/96/roblox.png"><h3>Roblox</h3></a>
+    <a class="card" href="download.html?app=Minecraft"><img src="https://img.icons8.com/color/96/minecraft.png"><h3>Minecraft</h3></a>
+    <a class="card" href="download.html?app=AmongUs"><img src="https://img.icons8.com/color/96/among-us.png"><h3>Among Us</h3></a>
+    <a class="card" href="download.html?app=MobileLegends"><img src="https://img.icons8.com/color/96/trophy.png"><h3>Mobile Legends</h3></a>
+    <!-- 50 apps done -->
+  </div>
+
+  <footer>© 2025 TaskNest Mobile Softwares</footer>
 
   <script>
-    const apps = [
-      // --- Browsers ---
-      {name: "Chrome", logo: "https://img.icons8.com/color/96/chrome--v1.png"},
-      {name: "Firefox", logo: "https://img.icons8.com/color/96/firefox.png"},
-      {name: "Edge", logo: "https://img.icons8.com/color/96/ms-edge-new.png"},
-      {name: "Opera", logo: "https://img.icons8.com/color/96/opera.png"},
-      {name: "Brave", logo: "https://img.icons8.com/color/96/brave-web-browser.png"},
-      {name: "Vivaldi", logo: "https://img.icons8.com/color/96/vivaldi-browser.png"},
-      
-      // --- Office & Adobe ---
-      {name: "Office", logo: "https://img.icons8.com/color/96/microsoft-office-2019.png"},
-      {name: "Photoshop", logo: "https://img.icons8.com/color/96/adobe-photoshop.png"},
-      {name: "Dreamweaver", logo: "https://img.icons8.com/color/96/adobe-dreamweaver.png"},
-      {name: "Lightroom", logo: "https://img.icons8.com/color/96/adobe-lightroom.png"},
-      {name: "Acrobat Reader", logo: "https://img.icons8.com/color/96/pdf-2.png"},
-      
-      // --- Utilities ---
-      {name: "WinRAR", logo: "https://img.icons8.com/color/96/winrar.png"},
-      {name: "7-Zip", logo: "https://img.icons8.com/fluency/96/compress.png"},
-      {name: "Notepad++", logo: "https://img.icons8.com/color/96/notepad-plus-plus.png"},
-      {name: "CCleaner", logo: "https://img.icons8.com/color/96/ccleaner.png"},
-      {name: "FileZilla", logo: "https://img.icons8.com/color/96/filezilla.png"},
-      {name: "TeamViewer", logo: "https://img.icons8.com/color/96/teamviewer.png"},
-      {name: "AnyDesk", logo: "https://img.icons8.com/color/96/anydesk.png"},
-      {name: "PowerISO", logo: "https://img.icons8.com/fluency/96/cd.png"},
-      {name: "Daemon Tools", logo: "https://img.icons8.com/color/96/iso.png"},
-      
-      // --- Media ---
-      {name: "VLC", logo: "https://img.icons8.com/color/96/vlc.png"},
-      {name: "Spotify", logo: "https://img.icons8.com/color/96/spotify.png"},
-      {name: "Audacity", logo: "https://img.icons8.com/color/96/audacity.png"},
-      {name: "OBS Studio", logo: "https://img.icons8.com/color/96/obs-studio.png"},
-      {name: "iTunes", logo: "https://img.icons8.com/color/96/itunes.png"},
-      
-      // --- Communication ---
-      {name: "Teams", logo: "https://img.icons8.com/color/96/microsoft-teams.png"},
-      {name: "Zoom", logo: "https://img.icons8.com/color/96/zoom.png"},
-      {name: "Skype", logo: "https://img.icons8.com/color/96/skype.png"},
-      {name: "Discord", logo: "https://img.icons8.com/color/96/discord-logo.png"},
-      {name: "Telegram", logo: "https://img.icons8.com/color/96/telegram-app.png"},
-      {name: "WhatsApp", logo: "https://img.icons8.com/color/96/whatsapp.png"},
-      
-      // --- Gaming ---
-      {name: "Minecraft", logo: "https://img.icons8.com/color/96/minecraft-logo.png"},
-      {name: "Steam", logo: "https://img.icons8.com/color/96/steam.png"},
-      {name: "Epic Games", logo: "https://img.icons8.com/color/96/epic-games.png"},
-      {name: "Battle.net", logo: "https://img.icons8.com/color/96/overwatch.png"},
-      {name: "Ubisoft Connect", logo: "https://img.icons8.com/color/96/uplay.png"},
-      
-      // --- Development ---
-      {name: "VS Code", logo: "https://img.icons8.com/color/96/visual-studio-code-2019.png"},
-      {name: "IntelliJ IDEA", logo: "https://img.icons8.com/color/96/intellij-idea.png"},
-      {name: "PyCharm", logo: "https://img.icons8.com/color/96/pycharm.png"},
-      {name: "Eclipse", logo: "https://img.icons8.com/color/96/java-coffee-cup-logo.png"},
-      {name: "NetBeans", logo: "https://img.icons8.com/color/96/source-code.png"},
-      {name: "Git", logo: "https://img.icons8.com/color/96/git.png"},
-      {name: "Node.js", logo: "https://img.icons8.com/color/96/nodejs.png"},
-      {name: "Python", logo: "https://img.icons8.com/color/96/python.png"},
-      {name: "Java JDK", logo: "https://img.icons8.com/color/96/java-coffee-cup-logo.png"},
-      {name: ".NET", logo: "https://img.icons8.com/color/96/net-framework.png"},
-      
-      // (Continue filling until ~100 apps)
-    ];
+    const searchInput = document.getElementById("searchInput");
+    const cards = document.querySelectorAll(".card");
 
-    const grid = document.getElementById("softwareGrid");
-    apps.forEach(app => {
-      const card = document.createElement("a");
-      card.className = "card";
-      card.href = "download.html?app=" + encodeURIComponent(app.name);
-      card.innerHTML = `
-        <img src="${app.logo}" alt="${app.name}">
-        <h2>${app.name}</h2>
-      `;
-      grid.appendChild(card);
-    });
-
-    // Search filter
-    document.getElementById("searchInput").addEventListener("input", function() {
-      const query = this.value.toLowerCase();
-      document.querySelectorAll(".card").forEach(card => {
-        card.style.display = card.innerText.toLowerCase().includes(query) ? "block" : "none";
+    searchInput.addEventListener("keyup", function() {
+      const filter = searchInput.value.toLowerCase();
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(filter) ? "" : "none";
       });
     });
   </script>
 </body>
 </html>
+
