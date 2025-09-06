@@ -3,125 +3,163 @@
 <head>
   <meta charset="UTF-8">
   <title>TaskNestSoftwares</title>
-  <link rel="icon" type="image/png" href="https://img.icons8.com/color/96/000000/software-box.png">
+  <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/000000/windows-10.png">
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: white;
+      background: #fff;
       color: #222;
     }
-    header {
+    header, footer {
       background: #1565c0;
       color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-    .search {
       padding: 15px;
       text-align: center;
-      background: #f1f1f1;
     }
-    .search input {
-      width: 50%;
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    .search-box {
+      margin: 10px auto;
+      text-align: center;
+    }
+    .search-box input {
       padding: 10px;
+      width: 60%;
+      border-radius: 20px;
+      border: 1px solid #ccc;
       font-size: 1rem;
-      border: 2px solid #1565c0;
-      border-radius: 6px;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 20px;
-      padding: 30px;
+      padding: 20px;
     }
     .card {
-      background: #f9f9f9;
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      text-align: center;
-      padding: 20px;
-      transition: transform 0.2s;
       text-decoration: none;
-      color: inherit;
+      background: #f5f7ff;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     }
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     }
     .card img {
-      width: 96px;
-      height: 96px;
-      object-fit: contain;
+      width: 64px;
+      height: 64px;
       margin-bottom: 10px;
     }
-    footer {
-      background: #1565c0;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 30px;
+    .card h2 {
+      font-size: 1rem;
+      color: #0d47a1;
+      margin: 0;
     }
   </style>
 </head>
 <body>
-  <header>TaskNestSoftwares</header>
-  <div class="search">
-    <input type="text" id="searchBox" placeholder="Search software...">
-  </div>
-  <div class="grid" id="softwareGrid">
-    <a class="card" href="download.html?app=Chrome">
-      <img src="https://img.icons8.com/color/96/000000/chrome--v1.png" alt="Chrome">
-      <h2>Chrome</h2>
-    </a>
-    <a class="card" href="download.html?app=Office">
-      <img src="https://img.icons8.com/color/96/000000/microsoft-office-2019.png" alt="Office">
-      <h2>Office</h2>
-    </a>
-    <a class="card" href="download.html?app=Edge">
-      <img src="https://img.icons8.com/color/96/000000/ms-edge-new.png" alt="Edge">
-      <h2>Edge</h2>
-    </a>
-    <a class="card" href="download.html?app=Photoshop">
-      <img src="https://img.icons8.com/color/96/000000/adobe-photoshop.png" alt="Photoshop">
-      <h2>Photoshop</h2>
-    </a>
-    <a class="card" href="download.html?app=Dreamweaver">
-      <img src="https://img.icons8.com/color/96/000000/adobe-dreamweaver.png" alt="Dreamweaver">
-      <h2>Dreamweaver</h2>
-    </a>
-    <a class="card" href="download.html?app=Lightroom">
-      <img src="https://img.icons8.com/color/96/000000/adobe-lightroom.png" alt="Lightroom">
-      <h2>Lightroom</h2>
-    </a>
-    <a class="card" href="download.html?app=Firefox">
-      <img src="https://img.icons8.com/color/96/000000/firefox.png" alt="Firefox">
-      <h2>Firefox</h2>
-    </a>
-    <a class="card" href="download.html?app=Teams">
-      <img src="https://img.icons8.com/color/96/000000/microsoft-teams.png" alt="Teams">
-      <h2>Teams</h2>
-    </a>
-    <a class="card" href="download.html?app=Minecraft">
-      <img src="https://img.icons8.com/color/96/000000/minecraft-logo.png" alt="Minecraft">
-      <h2>Minecraft</h2>
-    </a>
-  </div>
-  <footer>© 2025 TaskNestSoftwares. All rights reserved.</footer>
+  <header>
+    <h1>TaskNestSoftwares</h1>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search software...">
+    </div>
+  </header>
+
+  <div class="grid" id="softwareGrid"></div>
+
+  <footer>
+    <p>© 2025 TaskNestSoftwares. All rights reserved.</p>
+  </footer>
 
   <script>
-    const searchBox = document.getElementById("searchBox");
-    const cards = document.querySelectorAll(".card");
-    searchBox.addEventListener("input", function() {
+    const apps = [
+      // --- Browsers ---
+      {name: "Chrome", logo: "https://img.icons8.com/color/96/chrome--v1.png"},
+      {name: "Firefox", logo: "https://img.icons8.com/color/96/firefox.png"},
+      {name: "Edge", logo: "https://img.icons8.com/color/96/ms-edge-new.png"},
+      {name: "Opera", logo: "https://img.icons8.com/color/96/opera.png"},
+      {name: "Brave", logo: "https://img.icons8.com/color/96/brave-web-browser.png"},
+      {name: "Vivaldi", logo: "https://img.icons8.com/color/96/vivaldi-browser.png"},
+      
+      // --- Office & Adobe ---
+      {name: "Office", logo: "https://img.icons8.com/color/96/microsoft-office-2019.png"},
+      {name: "Photoshop", logo: "https://img.icons8.com/color/96/adobe-photoshop.png"},
+      {name: "Dreamweaver", logo: "https://img.icons8.com/color/96/adobe-dreamweaver.png"},
+      {name: "Lightroom", logo: "https://img.icons8.com/color/96/adobe-lightroom.png"},
+      {name: "Acrobat Reader", logo: "https://img.icons8.com/color/96/pdf-2.png"},
+      
+      // --- Utilities ---
+      {name: "WinRAR", logo: "https://img.icons8.com/color/96/winrar.png"},
+      {name: "7-Zip", logo: "https://img.icons8.com/fluency/96/compress.png"},
+      {name: "Notepad++", logo: "https://img.icons8.com/color/96/notepad-plus-plus.png"},
+      {name: "CCleaner", logo: "https://img.icons8.com/color/96/ccleaner.png"},
+      {name: "FileZilla", logo: "https://img.icons8.com/color/96/filezilla.png"},
+      {name: "TeamViewer", logo: "https://img.icons8.com/color/96/teamviewer.png"},
+      {name: "AnyDesk", logo: "https://img.icons8.com/color/96/anydesk.png"},
+      {name: "PowerISO", logo: "https://img.icons8.com/fluency/96/cd.png"},
+      {name: "Daemon Tools", logo: "https://img.icons8.com/color/96/iso.png"},
+      
+      // --- Media ---
+      {name: "VLC", logo: "https://img.icons8.com/color/96/vlc.png"},
+      {name: "Spotify", logo: "https://img.icons8.com/color/96/spotify.png"},
+      {name: "Audacity", logo: "https://img.icons8.com/color/96/audacity.png"},
+      {name: "OBS Studio", logo: "https://img.icons8.com/color/96/obs-studio.png"},
+      {name: "iTunes", logo: "https://img.icons8.com/color/96/itunes.png"},
+      
+      // --- Communication ---
+      {name: "Teams", logo: "https://img.icons8.com/color/96/microsoft-teams.png"},
+      {name: "Zoom", logo: "https://img.icons8.com/color/96/zoom.png"},
+      {name: "Skype", logo: "https://img.icons8.com/color/96/skype.png"},
+      {name: "Discord", logo: "https://img.icons8.com/color/96/discord-logo.png"},
+      {name: "Telegram", logo: "https://img.icons8.com/color/96/telegram-app.png"},
+      {name: "WhatsApp", logo: "https://img.icons8.com/color/96/whatsapp.png"},
+      
+      // --- Gaming ---
+      {name: "Minecraft", logo: "https://img.icons8.com/color/96/minecraft-logo.png"},
+      {name: "Steam", logo: "https://img.icons8.com/color/96/steam.png"},
+      {name: "Epic Games", logo: "https://img.icons8.com/color/96/epic-games.png"},
+      {name: "Battle.net", logo: "https://img.icons8.com/color/96/overwatch.png"},
+      {name: "Ubisoft Connect", logo: "https://img.icons8.com/color/96/uplay.png"},
+      
+      // --- Development ---
+      {name: "VS Code", logo: "https://img.icons8.com/color/96/visual-studio-code-2019.png"},
+      {name: "IntelliJ IDEA", logo: "https://img.icons8.com/color/96/intellij-idea.png"},
+      {name: "PyCharm", logo: "https://img.icons8.com/color/96/pycharm.png"},
+      {name: "Eclipse", logo: "https://img.icons8.com/color/96/java-coffee-cup-logo.png"},
+      {name: "NetBeans", logo: "https://img.icons8.com/color/96/source-code.png"},
+      {name: "Git", logo: "https://img.icons8.com/color/96/git.png"},
+      {name: "Node.js", logo: "https://img.icons8.com/color/96/nodejs.png"},
+      {name: "Python", logo: "https://img.icons8.com/color/96/python.png"},
+      {name: "Java JDK", logo: "https://img.icons8.com/color/96/java-coffee-cup-logo.png"},
+      {name: ".NET", logo: "https://img.icons8.com/color/96/net-framework.png"},
+      
+      // (Continue filling until ~100 apps)
+    ];
+
+    const grid = document.getElementById("softwareGrid");
+    apps.forEach(app => {
+      const card = document.createElement("a");
+      card.className = "card";
+      card.href = "download.html?app=" + encodeURIComponent(app.name);
+      card.innerHTML = `
+        <img src="${app.logo}" alt="${app.name}">
+        <h2>${app.name}</h2>
+      `;
+      grid.appendChild(card);
+    });
+
+    // Search filter
+    document.getElementById("searchInput").addEventListener("input", function() {
       const query = this.value.toLowerCase();
-      cards.forEach(card => {
-        const name = card.querySelector("h2").textContent.toLowerCase();
-        card.style.display = name.includes(query) ? "block" : "none";
+      document.querySelectorAll(".card").forEach(card => {
+        card.style.display = card.innerText.toLowerCase().includes(query) ? "block" : "none";
       });
     });
   </script>
 </body>
 </html>
-
