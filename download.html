@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Download</title>
-  <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/000000/download.png">
+  <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/download.png">
   <style>
     body {
       margin: 0;
@@ -74,7 +74,7 @@
   <div class="container">
     <img id="appLogo" class="logo" src="https://via.placeholder.com/100?text=App" alt="App Logo">
     <h1 id="title">Loading...</h1>
-    <p id="desc">Click the button below to go to the official download page.</p>
+    <p id="desc">Click below to go to the official download page.</p>
     <a id="downloadBtn" class="btn" href="#">Go to Official Website</a>
     <br>
     <a href="index.html" class="back">← Back to Home</a>
@@ -84,39 +84,115 @@
   </footer>
 
   <script>
-    // Get app name from URL
     const params = new URLSearchParams(window.location.search);
     const app = params.get("app") || "Unknown";
-
     document.getElementById("title").textContent = "Download " + app;
 
-    // Official websites
     const downloadLinks = {
+      // Browsers
       "Chrome": "https://www.google.com/chrome/",
-      "Office": "https://www.microsoft.com/microsoft-365",
+      "Firefox": "https://www.mozilla.org/firefox/",
       "Edge": "https://www.microsoft.com/edge",
+      "Opera": "https://www.opera.com/download",
+      "Brave": "https://brave.com/download/",
+      "Vivaldi": "https://vivaldi.com/download/",
+      // Office & Adobe
+      "Office": "https://www.microsoft.com/microsoft-365",
       "Photoshop": "https://www.adobe.com/products/photoshop.html",
       "Dreamweaver": "https://www.adobe.com/products/dreamweaver.html",
       "Lightroom": "https://www.adobe.com/products/photoshop-lightroom.html",
-      "Firefox": "https://www.mozilla.org/firefox/",
+      "Acrobat Reader": "https://get.adobe.com/reader/",
+      // Utilities
+      "WinRAR": "https://www.win-rar.com/download.html",
+      "7-Zip": "https://www.7-zip.org/download.html",
+      "Notepad++": "https://notepad-plus-plus.org/downloads/",
+      "CCleaner": "https://www.ccleaner.com/ccleaner/download",
+      "FileZilla": "https://filezilla-project.org/download.php",
+      "TeamViewer": "https://www.teamviewer.com/download/",
+      "AnyDesk": "https://anydesk.com/en/downloads",
+      "PowerISO": "https://www.poweriso.com/download.php",
+      "Daemon Tools": "https://www.daemon-tools.cc/products/dtLite",
+      // Media
+      "VLC": "https://www.videolan.org/vlc/",
+      "Spotify": "https://www.spotify.com/download/",
+      "Audacity": "https://www.audacityteam.org/download/",
+      "OBS Studio": "https://obsproject.com/download",
+      "iTunes": "https://www.apple.com/itunes/download/",
+      // Communication
       "Teams": "https://www.microsoft.com/microsoft-teams",
-      "Minecraft": "https://www.minecraft.net/en-us/download"
+      "Zoom": "https://zoom.us/download",
+      "Skype": "https://www.skype.com/get-skype/",
+      "Discord": "https://discord.com/download",
+      "Telegram": "https://telegram.org/apps",
+      "WhatsApp": "https://www.whatsapp.com/download",
+      // Gaming
+      "Minecraft": "https://www.minecraft.net/download",
+      "Steam": "https://store.steampowered.com/about/",
+      "Epic Games": "https://store.epicgames.com/download",
+      "Battle.net": "https://www.blizzard.com/download",
+      "Ubisoft Connect": "https://ubisoftconnect.com/",
+      // Development
+      "VS Code": "https://code.visualstudio.com/download",
+      "IntelliJ IDEA": "https://www.jetbrains.com/idea/download/",
+      "PyCharm": "https://www.jetbrains.com/pycharm/download/",
+      "Eclipse": "https://www.eclipse.org/downloads/",
+      "NetBeans": "https://netbeans.apache.org/download/",
+      "Git": "https://git-scm.com/downloads",
+      "Node.js": "https://nodejs.org/en/download/",
+      "Python": "https://www.python.org/downloads/",
+      "Java JDK": "https://www.oracle.com/java/technologies/downloads/",
+      ".NET": "https://dotnet.microsoft.com/en-us/download"
     };
 
-    // Logos
     const logos = {
-      "Chrome": "https://img.icons8.com/color/96/000000/chrome--v1.png",
-      "Office": "https://img.icons8.com/color/96/000000/microsoft-office-2019.png",
-      "Edge": "https://img.icons8.com/color/96/000000/ms-edge-new.png",
-      "Photoshop": "https://img.icons8.com/color/96/000000/adobe-photoshop.png",
-      "Dreamweaver": "https://img.icons8.com/color/96/000000/adobe-dreamweaver.png",
-      "Lightroom": "https://img.icons8.com/color/96/000000/adobe-lightroom.png",
-      "Firefox": "https://img.icons8.com/color/96/000000/firefox.png",
-      "Teams": "https://img.icons8.com/color/96/000000/microsoft-teams.png",
-      "Minecraft": "https://img.icons8.com/color/96/000000/minecraft-logo.png"
+      "Chrome": "https://img.icons8.com/color/96/chrome--v1.png",
+      "Firefox": "https://img.icons8.com/color/96/firefox.png",
+      "Edge": "https://img.icons8.com/color/96/ms-edge-new.png",
+      "Opera": "https://img.icons8.com/color/96/opera.png",
+      "Brave": "https://img.icons8.com/color/96/brave-web-browser.png",
+      "Vivaldi": "https://img.icons8.com/color/96/vivaldi-browser.png",
+      "Office": "https://img.icons8.com/color/96/microsoft-office-2019.png",
+      "Photoshop": "https://img.icons8.com/color/96/adobe-photoshop.png",
+      "Dreamweaver": "https://img.icons8.com/color/96/adobe-dreamweaver.png",
+      "Lightroom": "https://img.icons8.com/color/96/adobe-lightroom.png",
+      "Acrobat Reader": "https://img.icons8.com/color/96/pdf-2.png",
+      "WinRAR": "https://img.icons8.com/color/96/winrar.png",
+      "7-Zip": "https://img.icons8.com/fluency/96/compress.png",
+      "Notepad++": "https://img.icons8.com/color/96/notepad-plus-plus.png",
+      "CCleaner": "https://img.icons8.com/color/96/ccleaner.png",
+      "FileZilla": "https://img.icons8.com/color/96/filezilla.png",
+      "TeamViewer": "https://img.icons8.com/color/96/teamviewer.png",
+      "AnyDesk": "https://img.icons8.com/color/96/anydesk.png",
+      "PowerISO": "https://img.icons8.com/fluency/96/cd.png",
+      "Daemon Tools": "https://img.icons8.com/color/96/iso.png",
+      "VLC": "https://img.icons8.com/color/96/vlc.png",
+      "Spotify": "https://img.icons8.com/color/96/spotify.png",
+      "Audacity": "https://img.icons8.com/color/96/audacity.png",
+      "OBS Studio": "https://img.icons8.com/color/96/obs-studio.png",
+      "iTunes": "https://img.icons8.com/color/96/itunes.png",
+      "Teams": "https://img.icons8.com/color/96/microsoft-teams.png",
+      "Zoom": "https://img.icons8.com/color/96/zoom.png",
+      "Skype": "https://img.icons8.com/color/96/skype.png",
+      "Discord": "https://img.icons8.com/color/96/discord-logo.png",
+      "Telegram": "https://img.icons8.com/color/96/telegram-app.png",
+      "WhatsApp": "https://img.icons8.com/color/96/whatsapp.png",
+      "Minecraft": "https://img.icons8.com/color/96/minecraft-logo.png",
+      "Steam": "https://img.icons8.com/color/96/steam.png",
+      "Epic Games": "https://img.icons8.com/color/96/epic-games.png",
+      "Battle.net": "https://img.icons8.com/color/96/overwatch.png",
+      "Ubisoft Connect": "https://img.icons8.com/color/96/uplay.png",
+      "VS Code": "https://img.icons8.com/color/96/visual-studio-code-2019.png",
+      "IntelliJ IDEA": "https://img.icons8.com/color/96/intellij-idea.png",
+      "PyCharm": "https://img.icons8.com/color/96/pycharm.png",
+      "Eclipse": "https://img.icons8.com/color/96/java-coffee-cup-logo.png",
+      "NetBeans": "https://img.icons8.com/color/96/source-code.png",
+      "Git": "https://img.icons8.com/color/96/git.png",
+      "Node.js": "https://img.icons8.com/color/96/nodejs.png",
+      "Python": "https://img.icons8.com/color/96/python.png",
+      "Java JDK": "https://img.icons8.com/color/96/java-coffee-cup-logo.png",
+      ".NET": "https://img.icons8.com/color/96/net-framework.png"
     };
 
-    // Set button link
     const btn = document.getElementById("downloadBtn");
     if (downloadLinks[app]) {
       btn.href = downloadLinks[app];
@@ -126,13 +202,10 @@
       btn.style.background = "#aaa";
     }
 
-    // Set logo
     const logoImg = document.getElementById("appLogo");
     if (logos[app]) {
       logoImg.src = logos[app];
       logoImg.alt = app + " Logo";
-    } else {
-      logoImg.src = "https://via.placeholder.com/100?text=App";
     }
   </script>
 </body>
