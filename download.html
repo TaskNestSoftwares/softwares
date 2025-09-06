@@ -3,139 +3,334 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TaskNest Mobile Softwares</title>
+  <title>Download | TaskNest Mobile Softwares</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #fff;
       color: #333;
+      text-align: center;
     }
     header, footer {
       background-color: #007BFF;
       color: white;
       padding: 15px;
-      text-align: center;
-      font-size: 22px;
+      font-size: 20px;
       font-weight: bold;
     }
-    .search-bar {
-      text-align: center;
-      margin: 15px;
+    .container {
+      padding: 30px;
     }
-    .search-bar input {
-      width: 60%;
-      padding: 10px;
-      font-size: 16px;
-      border: 2px solid #007BFF;
-      border-radius: 8px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-    .card {
-      text-align: center;
-      background: #f8f9fa;
-      padding: 15px;
-      border-radius: 12px;
-      transition: 0.3s;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-decoration: none;
-      color: inherit;
-    }
-    .card:hover {
-      background: #eaf3ff;
-      transform: translateY(-5px);
-    }
-    .card img {
-      width: 80px;
-      height: 80px;
+    .app-logo {
+      width: 120px;
+      height: 120px;
       object-fit: contain;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+    }
+    .app-title {
+      font-size: 28px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      color: #007BFF;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      font-size: 18px;
+      color: white;
+      background-color: #007BFF;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
-  <header>TaskNest Mobile Softwares</header>
+  <header>TaskNest Mobile Softwares - Download</header>
 
-  <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="Search apps...">
-  </div>
-
-  <div class="grid" id="appGrid">
-    <!-- 50 Apps -->
-    <a class="card" href="download.html?app=WhatsApp"><img src="https://img.icons8.com/color/96/whatsapp.png"><h3>WhatsApp</h3></a>
-    <a class="card" href="download.html?app=Instagram"><img src="https://img.icons8.com/color/96/instagram-new.png"><h3>Instagram</h3></a>
-    <a class="card" href="download.html?app=TikTok"><img src="https://img.icons8.com/color/96/tiktok.png"><h3>TikTok</h3></a>
-    <a class="card" href="download.html?app=Facebook"><img src="https://img.icons8.com/color/96/facebook.png"><h3>Facebook</h3></a>
-    <a class="card" href="download.html?app=Snapchat"><img src="https://img.icons8.com/color/96/snapchat.png"><h3>Snapchat</h3></a>
-    <a class="card" href="download.html?app=Telegram"><img src="https://img.icons8.com/color/96/telegram-app.png"><h3>Telegram</h3></a>
-    <a class="card" href="download.html?app=Twitter"><img src="https://img.icons8.com/color/96/twitter.png"><h3>Twitter (X)</h3></a>
-    <a class="card" href="download.html?app=Threads"><img src="https://img.icons8.com/ios-filled/96/threads.png"><h3>Threads</h3></a>
-    <a class="card" href="download.html?app=YouTube"><img src="https://img.icons8.com/color/96/youtube-play.png"><h3>YouTube</h3></a>
-    <a class="card" href="download.html?app=Spotify"><img src="https://img.icons8.com/color/96/spotify.png"><h3>Spotify</h3></a>
-    <a class="card" href="download.html?app=Netflix"><img src="https://img.icons8.com/color/96/netflix.png"><h3>Netflix</h3></a>
-    <a class="card" href="download.html?app=Discord"><img src="https://img.icons8.com/color/96/discord.png"><h3>Discord</h3></a>
-    <a class="card" href="download.html?app=Reddit"><img src="https://img.icons8.com/color/96/reddit.png"><h3>Reddit</h3></a>
-    <a class="card" href="download.html?app=Pinterest"><img src="https://img.icons8.com/color/96/pinterest.png"><h3>Pinterest</h3></a>
-    <a class="card" href="download.html?app=LinkedIn"><img src="https://img.icons8.com/color/96/linkedin.png"><h3>LinkedIn</h3></a>
-    <a class="card" href="download.html?app=Messenger"><img src="https://img.icons8.com/color/96/facebook-messenger.png"><h3>Messenger</h3></a>
-    <a class="card" href="download.html?app=Skype"><img src="https://img.icons8.com/color/96/skype.png"><h3>Skype</h3></a>
-    <a class="card" href="download.html?app=WeChat"><img src="https://img.icons8.com/color/96/weixing.png"><h3>WeChat</h3></a>
-    <a class="card" href="download.html?app=Signal"><img src="https://img.icons8.com/color/96/signal-app.png"><h3>Signal</h3></a>
-    <a class="card" href="download.html?app=Clubhouse"><img src="https://img.icons8.com/ios-filled/96/clubhouse.png"><h3>Clubhouse</h3></a>
-
-    <a class="card" href="download.html?app=Gmail"><img src="https://img.icons8.com/color/96/gmail.png"><h3>Gmail</h3></a>
-    <a class="card" href="download.html?app=GoogleDrive"><img src="https://img.icons8.com/color/96/google-drive.png"><h3>Google Drive</h3></a>
-    <a class="card" href="download.html?app=Outlook"><img src="https://img.icons8.com/color/96/ms-outlook.png"><h3>Outlook</h3></a>
-    <a class="card" href="download.html?app=Zoom"><img src="https://img.icons8.com/color/96/zoom.png"><h3>Zoom</h3></a>
-    <a class="card" href="download.html?app=Teams"><img src="https://img.icons8.com/color/96/microsoft-teams.png"><h3>Teams</h3></a>
-    <a class="card" href="download.html?app=Slack"><img src="https://img.icons8.com/color/96/slack.png"><h3>Slack</h3></a>
-    <a class="card" href="download.html?app=Notion"><img src="https://img.icons8.com/ios-filled/96/notion.png"><h3>Notion</h3></a>
-    <a class="card" href="download.html?app=Dropbox"><img src="https://img.icons8.com/color/96/dropbox.png"><h3>Dropbox</h3></a>
-    <a class="card" href="download.html?app=Evernote"><img src="https://img.icons8.com/color/96/evernote.png"><h3>Evernote</h3></a>
-    <a class="card" href="download.html?app=OneNote"><img src="https://img.icons8.com/color/96/onenote.png"><h3>OneNote</h3></a>
-
-    <a class="card" href="download.html?app=Amazon"><img src="https://img.icons8.com/color/96/amazon.png"><h3>Amazon</h3></a>
-    <a class="card" href="download.html?app=eBay"><img src="https://img.icons8.com/color/96/ebay.png"><h3>eBay</h3></a>
-    <a class="card" href="download.html?app=AliExpress"><img src="https://img.icons8.com/color/96/aliexpress.png"><h3>AliExpress</h3></a>
-    <a class="card" href="download.html?app=Flipkart"><img src="https://img.icons8.com/color/96/flipkart.png"><h3>Flipkart</h3></a>
-    <a class="card" href="download.html?app=Daraz"><img src="https://img.icons8.com/color/96/shopify.png"><h3>Daraz</h3></a>
-    <a class="card" href="download.html?app=PayPal"><img src="https://img.icons8.com/color/96/paypal.png"><h3>PayPal</h3></a>
-    <a class="card" href="download.html?app=Easypaisa"><img src="https://img.icons8.com/color/96/money-bag.png"><h3>Easypaisa</h3></a>
-    <a class="card" href="download.html?app=JazzCash"><img src="https://img.icons8.com/color/96/wallet.png"><h3>JazzCash</h3></a>
-    <a class="card" href="download.html?app=Binance"><img src="https://img.icons8.com/color/96/bitcoin.png"><h3>Binance</h3></a>
-    <a class="card" href="download.html?app=Coinbase"><img src="https://img.icons8.com/color/96/ethereum.png"><h3>Coinbase</h3></a>
-
-    <a class="card" href="download.html?app=PUBGMobile"><img src="https://img.icons8.com/color/96/pubg.png"><h3>PUBG Mobile</h3></a>
-    <a class="card" href="download.html?app=FreeFire"><img src="https://img.icons8.com/color/96/fire-element.png"><h3>Free Fire</h3></a>
-    <a class="card" href="download.html?app=CODMobile"><img src="https://img.icons8.com/color/96/target.png"><h3>COD Mobile</h3></a>
-    <a class="card" href="download.html?app=ClashOfClans"><img src="https://img.icons8.com/color/96/greek-helmet.png"><h3>Clash of Clans</h3></a>
-    <a class="card" href="download.html?app=ClashRoyale"><img src="https://img.icons8.com/color/96/castle.png"><h3>Clash Royale</h3></a>
-    <a class="card" href="download.html?app=CandyCrush"><img src="https://img.icons8.com/color/96/candy.png"><h3>Candy Crush</h3></a>
-    <a class="card" href="download.html?app=Roblox"><img src="https://img.icons8.com/color/96/roblox.png"><h3>Roblox</h3></a>
-    <a class="card" href="download.html?app=Minecraft"><img src="https://img.icons8.com/color/96/minecraft.png"><h3>Minecraft</h3></a>
-    <a class="card" href="download.html?app=AmongUs"><img src="https://img.icons8.com/color/96/among-us.png"><h3>Among Us</h3></a>
-    <a class="card" href="download.html?app=MobileLegends"><img src="https://img.icons8.com/color/96/trophy.png"><h3>Mobile Legends</h3></a>
-    <!-- 50 apps done -->
+  <div class="container">
+    <img id="appLogo" class="app-logo" src="" alt="App Logo">
+    <div id="appName" class="app-title"></div>
+    <div>
+      <a id="androidLink" class="btn" href="#" target="_blank">Download for Android</a>
+      <a id="iosLink" class="btn" href="#" target="_blank">Download for iOS</a>
+    </div>
   </div>
 
   <footer>© 2025 TaskNest Mobile Softwares</footer>
 
   <script>
-    const searchInput = document.getElementById("searchInput");
-    const cards = document.querySelectorAll(".card");
+    const urlParams = new URLSearchParams(window.location.search);
+    const app = urlParams.get("app");
 
-    searchInput.addEventListener("keyup", function() {
-      const filter = searchInput.value.toLowerCase();
-      cards.forEach(card => {
-        const text = card.innerText.toLowerCase();
-        card.style.display = text.includes(filter) ? "" : "none";
-      });
-    });
+    const apps = {
+      "WhatsApp": {
+        logo: "https://img.icons8.com/color/96/whatsapp.png",
+        android: "https://play.google.com/store/apps/details?id=com.whatsapp",
+        ios: "https://apps.apple.com/app/whatsapp-messenger/id310633997"
+      },
+      "Instagram": {
+        logo: "https://img.icons8.com/color/96/instagram-new.png",
+        android: "https://play.google.com/store/apps/details?id=com.instagram.android",
+        ios: "https://apps.apple.com/app/instagram/id389801252"
+      },
+      "TikTok": {
+        logo: "https://img.icons8.com/color/96/tiktok.png",
+        android: "https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically",
+        ios: "https://apps.apple.com/app/tiktok/id835599320"
+      },
+      "Facebook": {
+        logo: "https://img.icons8.com/color/96/facebook.png",
+        android: "https://play.google.com/store/apps/details?id=com.facebook.katana",
+        ios: "https://apps.apple.com/app/facebook/id284882215"
+      },
+      "Snapchat": {
+        logo: "https://img.icons8.com/color/96/snapchat.png",
+        android: "https://play.google.com/store/apps/details?id=com.snapchat.android",
+        ios: "https://apps.apple.com/app/snapchat/id447188370"
+      },
+      "Telegram": {
+        logo: "https://img.icons8.com/color/96/telegram-app.png",
+        android: "https://play.google.com/store/apps/details?id=org.telegram.messenger",
+        ios: "https://apps.apple.com/app/telegram-messenger/id686449807"
+      },
+      "Twitter": {
+        logo: "https://img.icons8.com/color/96/twitter.png",
+        android: "https://play.google.com/store/apps/details?id=com.twitter.android",
+        ios: "https://apps.apple.com/app/x/id333903271"
+      },
+      "Threads": {
+        logo: "https://img.icons8.com/ios-filled/96/threads.png",
+        android: "https://play.google.com/store/apps/details?id=com.instagram.barcelona",
+        ios: "https://apps.apple.com/app/threads-an-instagram-app/id6446901002"
+      },
+      "YouTube": {
+        logo: "https://img.icons8.com/color/96/youtube-play.png",
+        android: "https://play.google.com/store/apps/details?id=com.google.android.youtube",
+        ios: "https://apps.apple.com/app/youtube/id544007664"
+      },
+      "Spotify": {
+        logo: "https://img.icons8.com/color/96/spotify.png",
+        android: "https://play.google.com/store/apps/details?id=com.spotify.music",
+        ios: "https://apps.apple.com/app/spotify-music/id324684580"
+      },
+      "Netflix": {
+        logo: "https://img.icons8.com/color/96/netflix.png",
+        android: "https://play.google.com/store/apps/details?id=com.netflix.mediaclient",
+        ios: "https://apps.apple.com/app/netflix/id363590051"
+      },
+      "Discord": {
+        logo: "https://img.icons8.com/color/96/discord.png",
+        android: "https://play.google.com/store/apps/details?id=com.discord",
+        ios: "https://apps.apple.com/app/discord-chat-talk-hangout/id985746746"
+      },
+      "Reddit": {
+        logo: "https://img.icons8.com/color/96/reddit.png",
+        android: "https://play.google.com/store/apps/details?id=com.reddit.frontpage",
+        ios: "https://apps.apple.com/app/reddit/id1064216828"
+      },
+      "Pinterest": {
+        logo: "https://img.icons8.com/color/96/pinterest.png",
+        android: "https://play.google.com/store/apps/details?id=com.pinterest",
+        ios: "https://apps.apple.com/app/pinterest/id429047995"
+      },
+      "LinkedIn": {
+        logo: "https://img.icons8.com/color/96/linkedin.png",
+        android: "https://play.google.com/store/apps/details?id=com.linkedin.android",
+        ios: "https://apps.apple.com/app/linkedin/id288429040"
+      },
+      "Messenger": {
+        logo: "https://img.icons8.com/color/96/facebook-messenger.png",
+        android: "https://play.google.com/store/apps/details?id=com.facebook.orca",
+        ios: "https://apps.apple.com/app/messenger/id454638411"
+      },
+      "Skype": {
+        logo: "https://img.icons8.com/color/96/skype.png",
+        android: "https://play.google.com/store/apps/details?id=com.skype.raider",
+        ios: "https://apps.apple.com/app/skype/id304878510"
+      },
+      "WeChat": {
+        logo: "https://img.icons8.com/color/96/weixing.png",
+        android: "https://play.google.com/store/apps/details?id=com.tencent.mm",
+        ios: "https://apps.apple.com/app/wechat/id414478124"
+      },
+      "Signal": {
+        logo: "https://img.icons8.com/color/96/signal-app.png",
+        android: "https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms",
+        ios: "https://apps.apple.com/app/signal-private-messenger/id874139669"
+      },
+      "Clubhouse": {
+        logo: "https://img.icons8.com/ios-filled/96/clubhouse.png",
+        android: "https://play.google.com/store/apps/details?id=com.clubhouse.app",
+        ios: "https://apps.apple.com/app/clubhouse/id1503133294"
+      },
+      "Gmail": {
+        logo: "https://img.icons8.com/color/96/gmail.png",
+        android: "https://play.google.com/store/apps/details?id=com.google.android.gm",
+        ios: "https://apps.apple.com/app/gmail-email-by-google/id422689480"
+      },
+      "GoogleDrive": {
+        logo: "https://img.icons8.com/color/96/google-drive.png",
+        android: "https://play.google.com/store/apps/details?id=com.google.android.apps.docs",
+        ios: "https://apps.apple.com/app/google-drive/id507874739"
+      },
+      "Outlook": {
+        logo: "https://img.icons8.com/color/96/ms-outlook.png",
+        android: "https://play.google.com/store/apps/details?id=com.microsoft.office.outlook",
+        ios: "https://apps.apple.com/app/microsoft-outlook/id951937596"
+      },
+      "Zoom": {
+        logo: "https://img.icons8.com/color/96/zoom.png",
+        android: "https://play.google.com/store/apps/details?id=us.zoom.videomeetings",
+        ios: "https://apps.apple.com/app/zoom-one-platform-to-connect/id546505307"
+      },
+      "Teams": {
+        logo: "https://img.icons8.com/color/96/microsoft-teams.png",
+        android: "https://play.google.com/store/apps/details?id=com.microsoft.teams",
+        ios: "https://apps.apple.com/app/microsoft-teams/id1113153706"
+      },
+      "Slack": {
+        logo: "https://img.icons8.com/color/96/slack.png",
+        android: "https://play.google.com/store/apps/details?id=com.Slack",
+        ios: "https://apps.apple.com/app/slack/id618783545"
+      },
+      "Notion": {
+        logo: "https://img.icons8.com/ios-filled/96/notion.png",
+        android: "https://play.google.com/store/apps/details?id=notion.id",
+        ios: "https://apps.apple.com/app/notion-notes-tasks-wikis/id1232780281"
+      },
+      "Dropbox": {
+        logo: "https://img.icons8.com/color/96/dropbox.png",
+        android: "https://play.google.com/store/apps/details?id=com.dropbox.android",
+        ios: "https://apps.apple.com/app/dropbox/id327630330"
+      },
+      "Evernote": {
+        logo: "https://img.icons8.com/color/96/evernote.png",
+        android: "https://play.google.com/store/apps/details?id=com.evernote",
+        ios: "https://apps.apple.com/app/evernote/id281796108"
+      },
+      "OneNote": {
+        logo: "https://img.icons8.com/color/96/onenote.png",
+        android: "https://play.google.com/store/apps/details?id=com.microsoft.office.onenote",
+        ios: "https://apps.apple.com/app/microsoft-onenote/id410395246"
+      },
+      "Amazon": {
+        logo: "https://img.icons8.com/color/96/amazon.png",
+        android: "https://play.google.com/store/apps/details?id=in.amazon.mShop.android.shopping",
+        ios: "https://apps.apple.com/app/amazon-shopping/id297606951"
+      },
+      "eBay": {
+        logo: "https://img.icons8.com/color/96/ebay.png",
+        android: "https://play.google.com/store/apps/details?id=com.ebay.mobile",
+        ios: "https://apps.apple.com/app/ebay-buy-sell/id282614216"
+      },
+      "AliExpress": {
+        logo: "https://img.icons8.com/color/96/aliexpress.png",
+        android: "https://play.google.com/store/apps/details?id=com.alibaba.aliexpresshd",
+        ios: "https://apps.apple.com/app/aliexpress/id436672029"
+      },
+      "Flipkart": {
+        logo: "https://img.icons8.com/color/96/flipkart.png",
+        android: "https://play.google.com/store/apps/details?id=com.flipkart.android",
+        ios: "https://apps.apple.com/app/flipkart/id742044692"
+      },
+      "Daraz": {
+        logo: "https://img.icons8.com/color/96/shopify.png",
+        android: "https://play.google.com/store/apps/details?id=com.daraz.android",
+        ios: "https://apps.apple.com/app/daraz-online-shopping-app/id978152052"
+      },
+      "PayPal": {
+        logo: "https://img.icons8.com/color/96/paypal.png",
+        android: "https://play.google.com/store/apps/details?id=com.paypal.android.p2pmobile",
+        ios: "https://apps.apple.com/app/paypal/id283646709"
+      },
+      "Easypaisa": {
+        logo: "https://img.icons8.com/color/96/money-bag.png",
+        android: "https://play.google.com/store/apps/details?id=pk.com.telenor.phoenix",
+        ios: "https://apps.apple.com/pk/app/easypaisa/id1449086309"
+      },
+      "JazzCash": {
+        logo: "https://img.icons8.com/color/96/wallet.png",
+        android: "https://play.google.com/store/apps/details?id=com.techlogix.mobilinkcustomer",
+        ios: "https://apps.apple.com/pk/app/jazzcash/id1354514786"
+      },
+      "Binance": {
+        logo: "https://img.icons8.com/color/96/bitcoin.png",
+        android: "https://play.google.com/store/apps/details?id=com.binance.dev",
+        ios: "https://apps.apple.com/app/binance-buy-bitcoin-crypto/id1436799971"
+      },
+      "Coinbase": {
+        logo: "https://img.icons8.com/color/96/ethereum.png",
+        android: "https://play.google.com/store/apps/details?id=com.coinbase.android",
+        ios: "https://apps.apple.com/app/coinbase-buy-bitcoin-ether/id886427730"
+      },
+      "PUBGMobile": {
+        logo: "https://img.icons8.com/color/96/pubg.png",
+        android: "https://play.google.com/store/apps/details?id=com.tencent.ig",
+        ios: "https://apps.apple.com/app/pubg-mobile/id1330123889"
+      },
+      "FreeFire": {
+        logo: "https://img.icons8.com/color/96/fire-element.png",
+        android: "https://play.google.com/store/apps/details?id=com.dts.freefireth",
+        ios: "https://apps.apple.com/app/garena-free-fire/id1300146617"
+      },
+      "CODMobile": {
+        logo: "https://img.icons8.com/color/96/target.png",
+        android: "https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter",
+        ios: "https://apps.apple.com/app/call-of-duty-mobile/id1287282214"
+      },
+      "ClashOfClans": {
+        logo: "https://img.icons8.com/color/96/greek-helmet.png",
+        android: "https://play.google.com/store/apps/details?id=com.supercell.clashofclans",
+        ios: "https://apps.apple.com/app/clash-of-clans/id529479190"
+      },
+      "ClashRoyale": {
+        logo: "https://img.icons8.com/color/96/castle.png",
+        android: "https://play.google.com/store/apps/details?id=com.supercell.clashroyale",
+        ios: "https://apps.apple.com/app/clash-royale/id1053012308"
+      },
+      "CandyCrush": {
+        logo: "https://img.icons8.com/color/96/candy.png",
+        android: "https://play.google.com/store/apps/details?id=com.king.candycrushsaga",
+        ios: "https://apps.apple.com/app/candy-crush-saga/id553834731"
+      },
+      "Roblox": {
+        logo: "https://img.icons8.com/color/96/roblox.png",
+        android: "https://play.google.com/store/apps/details?id=com.roblox.client",
+        ios: "https://apps.apple.com/app/roblox/id431946152"
+      },
+      "Minecraft": {
+        logo: "https://img.icons8.com/color/96/minecraft.png",
+        android: "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe",
+        ios: "https://apps.apple.com/app/minecraft/id479516143"
+      },
+      "AmongUs": {
+        logo: "https://img.icons8.com/color/96/among-us.png",
+        android: "https://play.google.com/store/apps/details?id=com.innersloth.spacemafia",
+        ios: "https://apps.apple.com/app/among-us/id1351168404"
+      },
+      "MobileLegends": {
+        logo: "https://img.icons8.com/color/96/trophy.png",
+        android: "https://play.google.com/store/apps/details?id=com.mobile.legends",
+        ios: "https://apps.apple.com/app/mobile-legends-bang-bang/id1160056295"
+      }
+    };
+
+    if (app && apps[app]) {
+      document.getElementById("appLogo").src = apps[app].logo;
+      document.getElementById("appName").innerText = app;
+      document.getElementById("androidLink").href = apps[app].android;
+      document.getElementById("iosLink").href = apps[app].ios;
+    } else {
+      document.getElementById("appName").innerText = "App not found!";
+      document.getElementById("androidLink").style.display = "none";
+      document.getElementById("iosLink").style.display = "none";
+    }
   </script>
 </body>
 </html>
